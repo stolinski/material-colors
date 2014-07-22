@@ -357,7 +357,8 @@ main {
   }
 
   .back {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
     padding: 80px 15px;
     text-align: center;
   }

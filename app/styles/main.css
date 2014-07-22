@@ -450,7 +450,7 @@ main {
 }
 .color-box .back {
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
   padding: 80px 15px;
   text-align: center;
 }

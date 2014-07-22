@@ -1,0 +1,21 @@
+{
+  "name": "Material Color",
+  "version": "0.0.1",
+  "homepage": "https://github.com/stolinski/material-colors",
+  "authors": [
+    "Scott Tolinski <scott.tolinski@gmail.com>"
+  ],
+  "description": "A useful interface for choosing material colors",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.4"
+  }
+}

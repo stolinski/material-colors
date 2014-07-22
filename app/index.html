@@ -20,6 +20,12 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
+    <!-- 1. Load platform support before any code that touches the DOM. -->
+    <script src="bower_components/platform/platform.js"></script>
+    <!-- 2. Load the component using an HTML Import -->
+
+
+    <link rel="import" href="elements/color-block.html">
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
     <link rel="canonical" href="http://www.example.com/">
@@ -54,20 +60,12 @@
 
     <main>
       <div class="color-container">
-        <div class="red color-box">
-          <div class="front">Red 500 <span>#e51c23</span></div>
-          <div class="back">Click To Copy</div>
-        </div>
-        <div class="a-red color-box">
-        </div>
+        <color-block color="#e51c23" name="red" shade="500"></color-block>
+        <color-block color="#ff5177" name="red" shade="A200"></color-block>
       </div>
       <div class="color-container">
-        <div class="pink color-box">
-          <div class="front">Pink 500 <span>#e91e63</span></div>
-          <div class="back">Click To Copy</div>
-        </div>
-        <div class="a-pink color-box">
-        </div>
+        <color-block color="#e91e63" name="pink" shade="500"></color-block>
+        <color-block color="#ff4081" name="pink" shade="A200"></color-block>
       </div>
       <div class="color-container">
         <div class="purple color-box">
