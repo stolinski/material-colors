@@ -1,0 +1,46 @@
+$colors: (
+    red: #e51c23,
+    a-red: #ff5177,
+    pink: #e91e63,
+    a-pink: #ff4081,
+    purple: #9c27b0,
+    a-purple: #e040fb,
+    deep-purple: #673ab7,
+    a-deep-purple: #7c4dff,
+    indigo: #3f51b5,
+    a-indigo: #536dfe,
+    blue: #5677fc,
+    a-blue: #6889ff,
+    lite-blue: #03a9f4,
+    a-lite-blue: #40c4ff,
+    cyan: #00bcd4,
+    a-cyan: #18ffff,
+    teal: #009688,
+    a-teal: #64ffda
+);
+
+
+@each $color, $hex in $colors  {
+    .#{$color} {
+        .back, .front {
+            background: $hex !important;
+        }
+    }
+}
+
+
+$red: (
+    '50':#fde0dc,
+    '100':#f9bdbb,
+    '200': #f69988
+);
+
+@each $color, $hex in $red  {
+    .red-#{$color} {
+        background: $hex !important;
+    }
+    .red-#{$color} {
+        background: $hex !important;
+    }
+}
+
