@@ -368,9 +368,31 @@ main {
   z-index: 1000;
   -webkit-perspective: 1000;
   position: relative;
-  width: 20%;
+  width: 50%;
   float: left;
-  height: 400px;
+  height: 300px;
+}
+
+@media (min-width: 700px) {
+  .color-container {
+    z-index: 1000;
+    -webkit-perspective: 1000;
+    position: relative;
+    width: 25%;
+    float: left;
+    height: 300px;
+  }
+}
+
+@media (min-width: 960px) {
+  .color-container {
+    z-index: 1000;
+    -webkit-perspective: 1000;
+    position: relative;
+    width: 20%;
+    float: left;
+    height: 300px;
+  }
 }
 
 

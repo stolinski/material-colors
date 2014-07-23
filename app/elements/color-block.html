@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="color-block" attributes="color name shade" noscript>
+<polymer-element name="color-block" attributes="color name shade accent" noscript>
   <template>
         <style>
         * {
@@ -26,8 +26,16 @@
             -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
         }
-        :host.accent .color-box, :host.accent .color-box .front,  :host.accent .color-box .back {
+        .color-box.accent,  .color-box.accent .front,  .color-box.accent .back {
             height: 100px;
+        }
+
+        .color-box.accent .front {
+            padding: 70px 2% 15px;
+        }
+
+        .color-box.accent .back {
+            padding: 25px 15px;
         }
 
         .color-box:hover {
@@ -70,7 +78,7 @@
         }
 
         </style>
-        <div class="color-box">
+        <div class="color-box {{accent}}">
             <div class="front">{{name}} {{shade}} <span>{{color}}</span></div>
             <div class="back">
                 Click To Copy

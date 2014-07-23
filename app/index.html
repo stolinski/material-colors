@@ -60,7 +60,7 @@
     <main>
       <div class="colors">
         <div class="color-container" ng-repeat="shades in contacts" >
-          <color-block ng-repeat="color in shades" ng-click="getSelectedColor(color)" color="{{color.color}}" name="{{color.name}}" shade="{{color.shade}}" class="accent"></color-block>
+          <color-block ng-repeat="color in shades" ng-click="getSelectedColor(color)" color="{{color.color}}" name="{{color.name}}" shade="{{color.shade}}" accent="{{color.shade == 'A200' ? 'accent' : '' }}"></color-block>
         </div>
       </div>
     </main>
