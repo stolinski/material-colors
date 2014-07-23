@@ -24,7 +24,6 @@
     <script src="bower_components/platform/platform.js"></script>
     <!-- 2. Load the component using an HTML Import -->
 
-
     <link rel="import" href="elements/color-block.html">
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -61,7 +60,7 @@
     <main>
       <div class="colors">
         <div class="color-container" ng-repeat="shades in contacts" >
-          <color-block ng-repeat="color in shades" ng-click="getSelectedColor(color)" color="{{color.color}}" name="{{color.name}}" shade="{{color.shade}}"></color-block>
+          <color-block ng-repeat="color in shades" ng-click="getSelectedColor(color)" color="{{color.color}}" name="{{color.name}}" shade="{{color.shade}}" class="accent"></color-block>
         </div>
       </div>
     </main>

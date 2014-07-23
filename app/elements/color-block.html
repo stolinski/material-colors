@@ -26,6 +26,10 @@
             -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
         }
+        :host.accent .color-box, :host.accent .color-box .front,  :host.accent .color-box .back {
+            height: 100px;
+        }
+
         .color-box:hover {
             -webkit-transform: rotateY(180deg);
                   transform: rotateY(180deg);
@@ -66,8 +70,6 @@
         }
 
         </style>
-
-
         <div class="color-box">
             <div class="front">{{name}} {{shade}} <span>{{color}}</span></div>
             <div class="back">
@@ -75,7 +77,5 @@
                 <span>Live Test</span>
             </div>
         </div>
-
-
      </template>
 </polymer-element>
