@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,18 +37,18 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="ColorsController">
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Material Colors</h1>
+        <h1 class="logo" style="color:{{current}};">Material Colors</h1>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
         </section>
       </div>
     </header>
 
-    <nav class="navdrawer-container promote-layer">
+    <nav class="navdrawer-container promote-layer" style="background:{{current}};">
       <h4>Navigation</h4>
       <ul>
         <li><a href="#hello">About</a></li>
@@ -58,47 +58,63 @@
       </ul>
     </nav>
 
+
     <main>
-      <div class="color-container">
-        <color-block color="#e51c23" name="red" shade="500"></color-block>
-        <color-block color="#ff5177" name="red" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#e91e63" name="pink" shade="500"></color-block>
-        <color-block color="#ff4081" name="pink" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#9c27b0" name="purple" shade="500"></color-block>
-        <color-block color="#e040fb" name="purple" shade="A200"></color-block>
-      </div>
-      </div>
-      <div class="color-container">
-        <color-block color="#673ab7" name="deep purple" shade="500"></color-block>
-        <color-block color="#7c4dff" name="deep purple" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#3f51b5" name="indigo" shade="500"></color-block>
-        <color-block color="#536dfe" name="indigo" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#5677fc" name="blue" shade="500"></color-block>
-        <color-block color="#6889ff" name="blue" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#03a9f4" name="light blue" shade="500"></color-block>
-        <color-block color="#40c4ff" name="light blue" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#00bcd4" name="cyan" shade="500"></color-block>
-        <color-block color="#18ffff" name="cyan" shade="A200"></color-block>
-      </div>
-      <div class="color-container">
-        <color-block color="#009688" name="teal" shade="500"></color-block>
-        <color-block color="#64ffda" name="teal" shade="A200"></color-block>
+      <div class="colors">
+        <div class="color-container" ng-repeat="shades in contacts" >
+          <color-block ng-repeat="color in shades" ng-click="getSelectedColor(color.color)" color="{{color.color}}" name="{{color.name}}" shade="{{color.shade}}"></color-block>
+        </div>
       </div>
     </main>
 
+<!--     <main ng-controller="ColorsController">
+      <div class="colors">
+        <div class="color-container">
+          <color-block color="#e51c23" name="red" shade="500"></color-block>
+          <color-block color="#ff5177" name="red" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#e91e63" name="pink" shade="500"></color-block>
+          <color-block color="#ff4081" name="pink" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#9c27b0" name="purple" shade="500"></color-block>
+          <color-block color="#e040fb" name="purple" shade="A200"></color-block>
+        </div>
+        </div>
+        <div class="color-container">
+          <color-block color="#673ab7" name="deep purple" shade="500"></color-block>
+          <color-block color="#7c4dff" name="deep purple" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#3f51b5" name="indigo" shade="500"></color-block>
+          <color-block color="#536dfe" name="indigo" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#5677fc" name="blue" shade="500"></color-block>
+          <color-block color="#6889ff" name="blue" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#03a9f4" name="light blue" shade="500"></color-block>
+          <color-block color="#40c4ff" name="light blue" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#00bcd4" name="cyan" shade="500"></color-block>
+          <color-block color="#18ffff" name="cyan" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#009688" name="teal" shade="500"></color-block>
+          <color-block color="#64ffda" name="teal" shade="A200"></color-block>
+        </div>
+        <div class="color-container">
+          <color-block color="#259b24" name="green" shade="500"></color-block>
+          <color-block color="#5af158" name="green" shade="A200"></color-block>
+        </div>
+      </div>
+    </main> -->
+
     <!-- build:js scripts/main.min.js -->
+    <script src="/bower_components/angular/angular.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
