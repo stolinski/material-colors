@@ -176,14 +176,17 @@ function ColorsController($scope) {
 
     ];
 
-    $scope.current = "#333";
-
     $scope.add = function() {
       $scope.contacts.push($scope.newcontact);
       $scope.newcontact = "";
     }
 
     $scope.getSelectedColor = function(color) {
-      $scope.current = color;
+      if (color.shade == "500") {
+        $scope.current = color.color;
+      } else if (color.shade == "A200") {
+        $scope.accent = color.color;
+      }
+
     }
 }
