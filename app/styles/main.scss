@@ -31,6 +31,7 @@ body.open {
 
 
 .app-bar {
+  z-index: 2000 !important;
   display: block;
   width: 100%;
   position: fixed;
@@ -242,8 +243,7 @@ main {
   .app-bar-container {
     display: block;
     height: 130px;
-    max-width: 864px;
-    padding: 0 16px;
+    padding: 0 90px;
     box-sizing: border-box;
   }
 
@@ -286,6 +286,7 @@ main {
     -webkit-transition: none;
             transition: none;
     overflow-y: auto;
+    padding: 0 75px;
   }
 
   .navdrawer-container h4 {
@@ -296,7 +297,6 @@ main {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 864px;
     margin: 0 auto;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -323,78 +323,48 @@ main {
   }
 }
 
-.color-box {
-  cursor: pointer;
-  z-index:100;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(.4,.75,.45,.37);
-  transform-origin: 50% 100%;
-  &:hover {
-    z-index:1000;
-    transform: rotateY(180deg );
-  }
-
-  .front, .back {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    backface-visibility: hidden;
-    height: 200px;
-    width: 100%;
-    color: #FFF;
-    font-size:1.4rem;
-    span {
-      float: right;
-    }
-  }
-
-  .front {
-    z-index: 2;
-    padding: 170px 2% 15px;
-  }
-
-  .back {
-    -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-    padding: 80px 15px;
-    text-align: center;
-  }
-}
 
 .color-container {
   z-index: 1000;
-  -webkit-perspective: 1000;
   position: relative;
   width: 50%;
   float: left;
   height: 300px;
 }
 
+
+#copied {
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
+  position: fixed;
+  width: 100%;
+  font-size:2.6rem;
+  text-align: center;
+  padding: 40px;
+  bottom: -200px;
+  background: #333;
+  color: #FFF;
+  z-index: 3000;
+  transition: all 0.2s ease;
+  &.open {
+    bottom: 0;
+  }
+}
+
 @media (min-width: 700px) {
   .color-container {
-    z-index: 1000;
-    -webkit-perspective: 1000;
-    position: relative;
     width: 25%;
-    float: left;
-    height: 300px;
   }
 }
 
 @media (min-width: 960px) {
   .color-container {
-    z-index: 1000;
-    -webkit-perspective: 1000;
-    position: relative;
-    width: 20%;
-    float: left;
-    height: 300px;
   }
 }
 
+@media (min-width: 1440px) {
+  .color-container {
+  }
+}
 
 @font-face {
   font-family: 'Roboto Condensed';

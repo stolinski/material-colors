@@ -46,11 +46,15 @@
       closeMenu();
     }
   });
+
+
 })();
 
 
 
-function ColorsController($scope) {
+var launch = angular.module('launch', ['ngClipboard']);
+
+launch.controller('ColorsController', function($scope) {
     $scope.contacts = [
     [{
       color: '#e51c23',
@@ -172,9 +176,19 @@ function ColorsController($scope) {
       color: '#ffab40',
       name: 'orange',
       shade: 'A200'
+    }], [{
+      color: '#ff5722',
+      name: 'deep orange',
+      shade: '500'
+    },{
+      color: '#ff6e40',
+      name: 'deep orange',
+      shade: 'A200'
     }]
 
     ];
+
+    $scope.current = '#333';
 
     $scope.add = function() {
       $scope.contacts.push($scope.newcontact);
@@ -189,4 +203,15 @@ function ColorsController($scope) {
       }
 
     }
-}
+
+    $scope.getTextToCopy = function(color) {
+        return color.color;
+    }
+
+    $scope.doSomething = function (color) {
+        console.log(color.color);
+        document.getElementById("copied").className = "open";
+        setTimeout(function(){document.getElementById("copied").className = "closed"},1000);
+    }
+
+});

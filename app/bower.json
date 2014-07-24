@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~0.3.4",
-    "angular": "~1.2.20"
+    "angular": "~1.2.20",
+    "ng-clip": "~0.2.2"
   }
 }
