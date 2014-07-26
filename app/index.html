@@ -37,16 +37,16 @@
     <!-- endbuild -->
   </head>
   <body ng-controller="ColorsController">
-    <header class="app-bar promote-layer" style="background:{{current}};">
+    <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo" style="color:{{accent}};">Material Colors</h1>
+        <h1 class="logo" style="color:{{current}}; border-bottom:{{accent}} solid 5px;">Material Colors</h1>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
         </section>
       </div>
     </header>
-    <nav class="navdrawer-container promote-layer" style="background:{{accent}};">
+    <nav class="navdrawer-container promote-layer" style="background:{{current}};">
       <h4>Navigation</h4>
       <ul>
         <li><a href="#hello">About</a></li>

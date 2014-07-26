@@ -188,7 +188,8 @@ launch.controller('ColorsController', function($scope) {
 
     ];
 
-    $scope.current = '#333';
+    $scope.current = '#3F51B5';
+    $scope.accent = '#ff4081';
 
     $scope.add = function() {
       $scope.contacts.push($scope.newcontact);
@@ -209,7 +210,6 @@ launch.controller('ColorsController', function($scope) {
     }
 
     $scope.doSomething = function (color) {
-        console.log(color.color);
         document.getElementById("copied").className = "open";
         setTimeout(function(){document.getElementById("copied").className = "closed"},1000);
     }

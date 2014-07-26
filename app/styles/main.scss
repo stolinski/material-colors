@@ -43,6 +43,7 @@ body.open {
 }
 
 .app-bar-container {
+  background: #eeeeee;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -222,7 +223,7 @@ button.menu img {
 main {
   margin: 0 auto;
   /* Height of the header */
-  padding: 0;
+  padding: 60px 0 0;
   min-height: 100%;
 }
 
@@ -249,9 +250,8 @@ main {
 
   .app-bar .logo {
     float: left;
-    margin: 0;
+    margin: 25px 0 0;
     padding: 0;
-    line-height: 130px;
     font-size: 46px;
   }
 
