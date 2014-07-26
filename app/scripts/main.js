@@ -239,30 +239,21 @@ launch.controller('ColorsController', function($scope) {
     $scope.accent = '#ff4081';
     $scope.text = '#FFF';
 
-
-    $scope.add = function() {
-      $scope.contacts.push($scope.newcontact);
-      $scope.newcontact = '';
-    }
-
     $scope.getSelectedColor = function(color) {
-      console.log($scope);
       if (color.shade == '500') {
-        $scope.current = color.color;
-        $scope.text = color.text;
-      } else if (color.shade == 'A200') {
-        $scope.accent = color.color;
+          $scope.current = color.color;
+          $scope.text = color.text;
+        } else if (color.shade == 'A200') {
+          $scope.accent = color.color;
       }
+
+      document.getElementById("copied").className = "open";
+      setTimeout(function(){document.getElementById("copied").className = "closed"},1000);
     }
 
 
     $scope.getTextToCopy = function(color) {
         return color.color;
-    }
-
-    $scope.doSomething = function (color) {
-        document.getElementById("copied").className = "open";
-        setTimeout(function(){document.getElementById("copied").className = "closed"},1000);
     }
 
 });
