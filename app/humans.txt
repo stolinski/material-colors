@@ -3,12 +3,19 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+  Scott Tolinski -- Creator/Developer -- @stolinski
 
 # THANKS
 
-  <name>
+  FlatUI Colors
+  Google Material Design
+  Team Detroit
+  Ben Schaaf @benschaaf
+  Level Up Tuts @leveluptuts
+  Jeff Arcel @jeffarcel
+  Cortney Robinson @im_CR
+  Courtney Tolinski @cbrookez
 
 # TECHNOLOGY COLOPHON
 
-  HTML5, CSS3
+  HTML5, CSS3, Polymer, Angular.js, Sass, Bower, Google Web Dev Starter Kit
