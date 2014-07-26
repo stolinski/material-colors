@@ -1,0 +1,5 @@
+<div class="colors">
+      <div class="color-container" ng-repeat="shades in contacts" >
+          <color-block class="color" ng-repeat="color in shades" clip-copy="getTextToCopy(color)" clip-click="doSomething(color)"  ng-click="getSelectedColor(color)" color="{{color.color}}" name="{{color.name}}" shade="{{color.shade}}" accent="{{color.shade == 'A200' ? 'accent' : '' }}" text="{{color.text}}"></color-block>
+      </div>
+</div>

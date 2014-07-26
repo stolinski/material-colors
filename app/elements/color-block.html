@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="color-block" attributes="color name shade accent" noscript>
+<polymer-element name="color-block" attributes="color name shade accent text" noscript>
   <template>
         <style>
         * {
@@ -52,7 +52,7 @@
             position: absolute;
             height: 40px;
             width: 100%;
-            color: #FFF;
+            color:  {{text}};
             font-size:1.4rem;
         }
 
