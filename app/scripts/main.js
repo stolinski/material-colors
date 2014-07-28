@@ -239,7 +239,19 @@ launch.controller('ColorsController', function($scope) {
     $scope.accent = '#ff4081';
     $scope.text = '#FFF';
 
+    $scope.mobileClick = function(color) {
+      if (color.shade == '500') {
+          $scope.current = color.color;
+          $scope.text = color.text;
+        } else if (color.shade == 'A200') {
+          $scope.accent = color.color;
+      }
+
+    }
+
+
     $scope.getSelectedColor = function(color) {
+
       if (color.shade == '500') {
           $scope.current = color.color;
           $scope.text = color.text;
